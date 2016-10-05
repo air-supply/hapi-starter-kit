@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node_modules/.bin/tape ./test/*.test.js",
     "lint": "node_modules/.bin/goodparts .",
-    "lint:fix": "node_modules/.bin/goodparts . --fix"
+    "lint:fix": "node_modules/.bin/goodparts . --fix",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/tape ./test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/o2tank/setup#readme",
   "devDependencies": {
     "goodparts": "^1.1.0",
+    "istanbul": "^0.4.5",
     "tape": "^4.6.2"
   }
 }
