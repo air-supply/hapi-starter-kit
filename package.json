@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/goodparts .",
+    "lint:fix": "node_modules/.bin/goodparts . --fix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/o2tank/setup/issues"
   },
-  "homepage": "https://github.com/o2tank/setup#readme"
+  "homepage": "https://github.com/o2tank/setup#readme",
+  "devDependencies": {
+    "goodparts": "^1.1.0"
+  }
 }
