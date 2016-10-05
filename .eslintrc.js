@@ -1,0 +1,1 @@
+/Users/jackrans/Documents/air_supply/setup/node_modules/goodparts/.eslintrc.js
