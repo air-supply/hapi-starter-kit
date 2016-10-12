@@ -20,7 +20,7 @@
     "cover",
     "check-coverage"
   ],
-  "author": "Jack Rans && Jack Carlisle",
+  "author": "@jackcarlisle && @jrans",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/o2tank/hapi-starter-kit/issues"
@@ -35,7 +35,7 @@
   "dependencies": {
     "env2": "^2.1.1",
     "hapi": "^15.1.1",
-    "hapi-riot": "^1.0.2",
+    "hapi-riot": "^1.1.0",
     "vision": "^4.1.0"
   }
 }
