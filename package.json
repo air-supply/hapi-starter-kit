@@ -35,6 +35,7 @@
   "dependencies": {
     "env2": "^2.1.1",
     "hapi": "^15.1.1",
+    "hapi-error": "^1.4.1",
     "hapi-riot": "^1.1.0",
     "vision": "^4.1.0"
   }
