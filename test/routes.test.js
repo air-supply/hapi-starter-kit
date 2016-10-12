@@ -3,7 +3,7 @@
 var test = require('tape');
 var server = require('../lib/index.js');
 
-test('hello-world', function (t) {
+test('hello_world', function (t) {
   var options = {
     method: 'GET',
     url: '/'
