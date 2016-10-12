@@ -10,7 +10,7 @@ test('hello-world', function (t) {
   };
 
   server.inject(options, function (response) {
-    t.equal(response.statusCode, 200, '✅ 200 response code returned');
+    t.equal(response.statusCode, 200, '✅  200 response code returned');
     t.end();
   });
 });
