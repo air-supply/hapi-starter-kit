@@ -10,12 +10,12 @@
   </div>
   <style>
     .container {
-      color: blue;
+      text-align: center;
       height: 1000px;
       width: 100%;
     }
     .error_400 {
-      background-color: #e67e22;
+      background-color: #f1c40f;
     }
     .error_500 {
       background-color: #e74c3c;
