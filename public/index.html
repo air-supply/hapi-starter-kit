@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>HELLO YOU BEAUTIFUL WORLD - INDEX</h1>
+    <div id="error"></div>
+    <form method="POST" url="/" id="itemForm">
+      <input id="title" type="input" placeholder="Title" name="title" />
+      <input id="description" type="input" placeholder="Description" name="description" />
+      <input id="submitButton" type="submit" value="Submit"/>
+    </form>
+    <div id="todo_list">
+      <todoList></todoList>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/2.6/riot+compiler.min.js"></script>
+    <script src="socket.js"></script>
+    <script type="riot/tag" src="../lib/views/todoList.tag"></script>
+  </body>
+</html>
