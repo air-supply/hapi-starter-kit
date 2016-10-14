@@ -1,34 +1,41 @@
 {
-  "name": "setup",
+  "name": "hapi-starter-kit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node_modules/.bin/tape ./test/*.test.js",
     "lint": "node_modules/.bin/goodparts .",
     "lint:fix": "node_modules/.bin/goodparts . --fix",
     "cover": "node_modules/.bin/istanbul cover node_modules/.bin/tape  ./test/*.test.js",
-    "check-coverage": "node_modules/.bin/istanbul check-coverage"
+    "check-coverage": "node_modules/.bin/istanbul check-coverage",
+    "start": "node lib/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/o2tank/setup.git"
+    "url": "git+https://github.com/o2tank/hapi-starter-kit.git"
   },
   "pre-commit": [
     "lint",
     "cover",
     "check-coverage"
   ],
-  "author": "Jack Rans && Jack Carlisle",
+  "author": "@jackcarlisle && @jrans",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/o2tank/setup/issues"
+    "url": "https://github.com/o2tank/hapi-starter-kit/issues"
   },
-  "homepage": "https://github.com/o2tank/setup#readme",
+  "homepage": "https://github.com/o2tank/hapi-starter-kit#readme",
   "devDependencies": {
     "goodparts": "^1.1.0",
     "istanbul": "^0.4.5",
     "pre-commit": "^1.1.3",
     "tape": "^4.6.2"
+  },
+  "dependencies": {
+    "env2": "^2.1.1",
+    "hapi": "^15.1.1",
+    "hapi-riot": "^1.1.0",
+    "vision": "^4.1.0"
   }
 }
