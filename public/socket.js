@@ -1,18 +1,32 @@
-/* global io */
+/* global io XMLHttpRequest riot */
 'use strict';
 
 var sockets = (function () {
+  var itemStore = [];
   var socket;
 
-  function renderItem (item) {
-    var todoList, todoTitle;
-    var listItem = document.createElement('li');
+  function request (method, path, payload, callback) {
+    var xhttp = new XMLHttpRequest();
+    var payloadString = JSON.stringify(payload);
+    var postData = payloadString || '';
+    var responseData;
 
-    todoTitle = item.title;
-    listItem.innerHTML = todoTitle;
-    todoList = document.getElementById('todo_list');
-    todoList.appendChild(listItem);
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        responseData = JSON.parse(xhttp.responseText);
+
+        return callback(null, responseData);
+      }
+    };
+    xhttp.open(method, path, true);
+    xhttp.send(postData);
   }
+
+  function renderItem (item) {
+    itemStore.push(item);
+    riot.update();
+  }
+
   function handleFormSubmit (event) {
     var title = event.target[0].value;
     var description = event.target[1].value;
@@ -22,10 +36,18 @@ var sockets = (function () {
     };
 
     event.preventDefault();
-    socket.emit('new:item', item);
+    request('POST', '/', item, function (err, data) {
+      if (err) {
+        document.getElementById('error').innerHTML = err;
+      } else {
+        document.getElementById('itemForm').reset();
+      }
+    });
+    event.preventDefault();
 
     return false;
   }
+
 
   document.onreadystatechange = function () {
     var form = document.getElementById('itemForm');
@@ -36,6 +58,7 @@ var sockets = (function () {
       socket.on('todo:item:latest', function (item) {
         renderItem(item);
       });
+      riot.mount('todoList', { itemStore: itemStore });
     }
   };
 })();

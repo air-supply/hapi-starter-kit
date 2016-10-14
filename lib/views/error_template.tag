@@ -7,6 +7,7 @@
     <h1 class='error_title'>{opts.errorTitle}</h1>
     <div class="error_message">{opts.errorMessage}</div>
     <h1 class="status_code">{opts.statusCode}</h1>
+    <h1 class='emoticon'>Σ(゜゜)</h1>
   </div>
   <style>
     .container {
