@@ -38,6 +38,7 @@
     "hapi-error": "^1.4.1",
     "hapi-riot": "^1.1.0",
     "inert": "^4.0.2",
+    "socket.io": "^1.5.0",
     "vision": "^4.1.0"
   }
 }
